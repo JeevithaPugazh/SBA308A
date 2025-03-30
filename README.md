@@ -1,3 +1,9 @@
+Home page:
+![Home Page](./src/images/birds.png)
+
+Bird Detail Page:
+![Home Page](./src/images/birdDetailPage.png)
+
 # Bird Explorer
 
 Bird Explorer is a web application that allows users to explore various bird species through images and sounds. It fetches data from an external API and displays a paginated list of birds with interactive features.
