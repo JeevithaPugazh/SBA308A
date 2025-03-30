@@ -1,9 +1,9 @@
 import { fetchBird } from "./js/api.js";
-import {createPageDropDown,loadbirdList,onChangePage} from './js/ui.js';
+import {createPageDropDown,loadbirdList,onChangePage, backToTheList} from './js/ui.js';
 
 const selectEl = document.getElementById("page");
 const listContainerEl = document.getElementById("list");
-
+const backToTheViewButton = document.getElementById("back");
 
 async function initialize() {
     const response = await fetchBird()
@@ -12,7 +12,8 @@ async function initialize() {
     const totalPage = response.total/response.pageSize;
      createPageDropDown(selectEl,totalPage);
      loadbirdList(listContainerEl,birdList)
-     selectEl.addEventListener("change",onChangePage)
+     selectEl.addEventListener("change",onChangePage);
+     backToTheViewButton.addEventListener("click", backToTheList)
 }
 
 //

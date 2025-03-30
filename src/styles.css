@@ -2,20 +2,21 @@
 @tailwind components;
 @tailwind utilities; */
 
-html, body {
+/* html, body {
     margin: 0;
     padding: 0;
     height: 100vh; 
     overflow: hidden;
-  }
+  } */
 
 
 body {
   background-color: #faedcd;
   height: 100vh;
-  /* display: flex;
-  flex-direction: column; */
   overflow: hidden;
+  /* display: flex;
+  flex-direction: column; 
+  
 }
 
 #birdDetail{
