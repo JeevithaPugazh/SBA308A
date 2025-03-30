@@ -7,7 +7,7 @@ const headers = {
     "API-Key": API_KEY,
   };
 //get Bird details
-export async function fetchBird(page = 1, pageSize = 20) {
+export async function fetchBird(page = 1, pageSize = 5) {
   try {
     const response = await axios.get(BIRD_API_URL, {
       params: { page, pageSize, operator: "AND" },

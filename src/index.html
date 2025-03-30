@@ -19,7 +19,8 @@
       crossorigin
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      href="https://fonts.googleapis.com/css2?
+      family=Delius+Swash+Caps&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
       rel="stylesheet"
     />
 
@@ -31,9 +32,13 @@
     <title>Birds</title>
     <script defer type="module" src="./index.js"></script>
   </head>
-  <body>
-    <div
-      class="fixed top-0 left-0 w-full h-24 bg-[#ccd5ae] text-2xl font-semibold flex justify-center items-center text-black z-50 shadow-md"
+  <body class="bg-[#ecf39e] overflow-hidden">
+    
+<audio id="myAudio">
+    
+  </audio>
+    <div style = "font-family: 'Merriweather', serif"
+      class="fixed top-0 left-0 w-full h-24 bg-[#4f772d] text-2xl font-semibold flex justify-center items-center text-white z-50 shadow-md"
     >
       Discover the World of Birds<span
         ><img
@@ -49,29 +54,34 @@
     </div>
     <div
       id="birds"
-      class="flex-1 mt-30 p-5"
+      class="flex flex-col mt-30  p-5"
     >
       <div class="pb-10 h-10">
         <label>Page:</label>
         <select
           name="pages"
           id="page"
-          class="w-30 border border-solid"
+          class="w-30 border-2 border-solid"
         ></select>
+      </div>
+      <div class="mb-3 text-center text-2xl">
+      <b>Bird List</b>  
       </div>
       <div
         id="list"
-        class="flex overflow-y-auto h-150  flex-wrap justify-between content-between"
+        class="flex overflow-y-auto h-150 w-300 m-auto flex-col justify-between content-between"
       ></div>
     </div>
 
-    <div id="birdDetailContainer" style="display: none;">
+    <div id="birdDetailContainer" class="hidden flex flex-col mt-20 p-5 h-200">
+        <div id="back-container" class="w-full h-10 flex justify-end">
       <button
         id="back"
-        class=""
+        class="w-30 h-10 hover:underline underline-offset-2"
       >
         Back to the list
       </button>
+    </div>
       <div id="birdDetail"></div>
     </div>
   </body>
